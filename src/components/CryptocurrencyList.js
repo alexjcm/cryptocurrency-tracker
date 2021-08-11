@@ -31,12 +31,20 @@ const CryptocurrencyList = () => {
 
   const renderCryptocurrencies = () => {
     if (isLoading) {
-      <Loader loading={isLoading} />;
+      return <Loader />;
     }
 
     return (
       <ul className="cryptocurrencylist list-group mt-2">
+        <li className="cryptocurrencylist-item list-group-item list-group-item-action align-items-center">
+          <span className="cryptocurrency-header text-bold">Asset</span>
+          <span className="cryptocurrency-text-symbol text-bold">Symbol</span>
+          <span className="cryptocurrency-text text-bold">Market price</span>
+          <span className="cryptocurrency-text text-bold">Price change % 24h</span>
+          <span className="cryptocurrency-text text-bold">Price change $ 24h</span>     
+        </li>
         {cryptocurrencies.map((cryptocurrency) => {
+          //console.log(cryptocurrencies);
           return (
             <Cryptocurrency
               key={cryptocurrency.id}

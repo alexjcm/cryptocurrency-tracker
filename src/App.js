@@ -15,7 +15,10 @@ const App = () => {
         <BrowserRouter>
           <Header />
           <Route exact path="/" component={CryptocurrencySummary} />
-          <Route path="/cryptocurrencies/:id" component={CryptocurrencyDetail} />
+          <Route
+            path="/cryptocurrencies/:id"
+            component={CryptocurrencyDetail}
+          />
         </BrowserRouter>
       </WatchListContextProvider>
     </div>

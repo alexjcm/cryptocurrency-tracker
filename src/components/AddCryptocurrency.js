@@ -7,18 +7,20 @@ const AddCryptocurrency = () => {
   const availableCryptocurrencies = [
     'bitcoin',
     'ethereum',
-    'ripple',
-    'tether',
     'bitcoin-cash',
+    'binancecoin',
+    'chainlink',
+    'ripple',
+    'okb',
+    'tether',
     'litecoin',
     'cardano',
-    'binancecoin',
     'polkadot',
     'solana',
     'stellar',
+    'uniswap',  
     'dogecoin',
-    'eos',
-    'okb',
+    'eos',  
     'tezos',
   ];
 
@@ -31,7 +33,7 @@ const AddCryptocurrency = () => {
     <div className="dropdown">
       <button
         onClick={() => setIsActive(!isActive)}
-        className="btn btn-primary dropdown-toggle"
+        className="btn btn-dark dropdown-toggle"
         type="button">
         Add Cryptocurrency
       </button>
@@ -39,6 +41,7 @@ const AddCryptocurrency = () => {
         {availableCryptocurrencies.map((el) => {
           return (
             <a
+              key={el}
               onClick={() => handleClick(el)}
               href="/#"
               className="dropdown-item">

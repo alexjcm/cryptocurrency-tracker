@@ -1,4 +1,5 @@
 import colorLib from '@kurkle/color';
+import { format } from 'date-fns'
 
 export function transparentize(value, opacity) {
   var alpha = opacity === undefined ? 0.5 : 1 - opacity;
@@ -14,3 +15,7 @@ export const CHART_COLORS = {
   purple: 'rgb(153, 102, 255)',
   grey: 'rgb(201, 203, 207)',
 };
+
+export function formatDate(date) {
+  return format(new Date(date), 'Pp')
+}

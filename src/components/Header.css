@@ -3,3 +3,11 @@
    padding-top: 25px;
    padding-bottom: 25px;
 }
+
+.button-home {
+   color: #c5c2c2;
+ }
+ .button-home:hover {
+   color: white;
+ }
+ 

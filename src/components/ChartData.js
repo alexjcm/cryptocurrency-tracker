@@ -11,15 +11,6 @@ import {
 } from 'chart.js';
 
 import {chartStyles, options} from '../chartOptions/chartOptions';
-import "./ChartData.css"
-
-Chart.register(
-  LineController,
-  LineElement,
-  LinearScale,
-  PointElement,
-  TimeScale
-);
 
 const ChartData = ({data}) => {
   const ctxChartRef = useRef();
@@ -38,6 +29,14 @@ const ChartData = ({data}) => {
         return day;
     }
   };
+
+  Chart.register(
+    LineController,
+    LineElement,
+    LinearScale,
+    PointElement,
+    TimeScale
+  );
 
   useEffect(() => {
     if (ctxChartRef && ctxChartRef.current && detail) {
@@ -73,6 +72,11 @@ const ChartData = ({data}) => {
                 ? 'text-danger my-0'
                 : 'text-success my-0'
             }>
+            {detail.price_change_24h < 0 ? (
+              <i className="fas fa-sort-down align-middle"></i>
+            ) : (
+              <i className="fas fa-sort-up align-middle"></i>
+            )}
             {detail.price_change_percentage_24h.toFixed(2)}%
           </p>
         </>
@@ -83,21 +87,10 @@ const ChartData = ({data}) => {
     <div className="bg-white border mt-2 rounded p-3">
       <div>{renderPrice()}</div>
       <div>
-        <canvas
-          ref={ctxChartRef}
-          id="myChart"
-          width={350}
-          height={250}></canvas>
-        <div id="tooltip">
-          <div class="tooltip-label"></div>
-          <div class="tooltip-value">
-            <span class="color-circle"></span>
-            <span class="value"></span>
-          </div>
-        </div>
+        <canvas ref={ctxChartRef} id="myChart" height={250}></canvas>
       </div>
 
-      <div className="chart-button mt-1">
+      <div className="chart-buttons">
         <button
           onClick={() => setTimeFormat('24h')}
           className="btn btn-outline-secondary btn-sm">
@@ -106,12 +99,12 @@ const ChartData = ({data}) => {
         <button
           onClick={() => setTimeFormat('7d')}
           className="btn btn-outline-secondary btn-sm mx-1">
-          7d
+          1 week
         </button>
         <button
           onClick={() => setTimeFormat('1y')}
           className="btn btn-outline-secondary btn-sm">
-          1y
+          1 year
         </button>
       </div>
     </div>
