@@ -2,8 +2,8 @@ import React from 'react';
 
 import {BrowserRouter, Route} from 'react-router-dom';
 
-import CoinDetailPage from './pages/CoinDetailPage';
-import CoinSummaryPage from './pages/CoinSummaryPage';
+import CryptocurrencyDetail from './pages/CryptocurrencyDetail';
+import CryptocurrencySummary from './pages/CryptocurrencySummary';
 import Header from './components/Header';
 import {WatchListContextProvider} from './context/watchListContext';
 import './App.css';
@@ -14,8 +14,8 @@ const App = () => {
       <WatchListContextProvider>
         <BrowserRouter>
           <Header />
-          <Route exact path="/" component={CoinSummaryPage} />
-          <Route path="/coins/:id" component={CoinDetailPage} />
+          <Route exact path="/" component={CryptocurrencySummary} />
+          <Route path="/cryptocurrencies/:id" component={CryptocurrencyDetail} />
         </BrowserRouter>
       </WatchListContextProvider>
     </div>

@@ -6,27 +6,27 @@
 }
 
 body {
-  background-color: #263238;
+  background-color: #2c2c2c;
 }
 
 ul {
   list-style: none;
 }
 
-.coinlist-image {
+.cryptocurrencylist-image {
   width: 50px;
 }
 
-.coinlist-item {
+.cryptocurrencylist-item {
   display: flex;
 }
 
-.coinsummary {
+.cryptocurrencysummary {
   border-color: white !important;
   border-style: outset !important;
 }
 
-.coin-data-category {
+.cryptocurrency-data-category {
   font-size: 10px;
 }
 
@@ -36,6 +36,6 @@ ul {
   right: 6px;
 }
 
-.coin:hover .delete-icon {
+.cryptocurrency:hover .delete-icon {
   display: block;
 }

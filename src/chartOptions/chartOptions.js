@@ -1,8 +1,22 @@
 import {transparentize, CHART_COLORS} from '../utils/Utils.js';
 
-export const chartOptions = {
+function processTooltipModel(model) {
+  if (!model.body) {
+    return;
+  }
+  const tooltip = document.getElementById('tooltip');
+  tooltip.style.left = model.caretX + 'px';
+  tooltip.style.top = model.caretY - 66 - 5 + 'px';
+  tooltip.style.display = 'block';
+  tooltip.querySelector('.tooltip-label').textContent =
+    model.dataPoints[0].label;
+  tooltip.querySelector('.tooltip-value .value').textContent =
+    '$' + model.dataPoints[0].value;
+}
+
+export const options = {
   animation: {
-    duration: 2500,
+    duration: 1500,
   },
   maintainAspectRatio: false,
   responsive: true,
@@ -29,6 +43,11 @@ export const chartOptions = {
         display: true,
         text: 'Price',
       },
+      ticks: {
+        callback: (value) => {
+          return '$' + value;
+        },
+      },
     },
   },
 
@@ -47,13 +66,19 @@ export const chartOptions = {
       display: true,
       text: 'Chart with Tick Configuration',
     },
-    tooltip: {
-      backgroundColor: CHART_COLORS.yellow,
-      borderColor: CHART_COLORS.yellow,
-      borderWidth: 1,
-      titleColor: 'black',
-      displayColors: true,
-    },
+    // tooltip: {
+    //   backgroundColor: CHART_COLORS.yellow,
+    //   borderColor: CHART_COLORS.yellow,
+    //   borderWidth: 1,
+    //   titleColor: 'black',
+    //   displayColors: true,
+    // },
+  },
+  tooltips: {
+    enabled: false,
+    custom: processTooltipModel,
+    intersect: false,
+    mode: 'index',
   },
 };
 
