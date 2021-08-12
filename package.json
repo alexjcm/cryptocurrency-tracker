@@ -2,7 +2,7 @@
   "name": "cryptocurrency-tracker",
   "version": "0.1.0",
   "private": true,
-  "homepage": "./cryptocurrency-tracker",
+  "homepage": "https://alexjcm.github.io/cryptocurrency-tracker",
   "dependencies": {
     "@emotion/core": "^10.0.22",
     "@kurkle/color": "^0.1.9",
