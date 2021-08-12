@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./cryptocurrency-tracker/static/css/main.66217b66.chunk.css",
-    "main.js": "./cryptocurrency-tracker/static/js/main.fff77517.chunk.js",
-    "main.js.map": "./cryptocurrency-tracker/static/js/main.fff77517.chunk.js.map",
-    "runtime-main.js": "./cryptocurrency-tracker/static/js/runtime-main.5e2d09df.js",
-    "runtime-main.js.map": "./cryptocurrency-tracker/static/js/runtime-main.5e2d09df.js.map",
-    "static/js/2.ef354312.chunk.js": "./cryptocurrency-tracker/static/js/2.ef354312.chunk.js",
-    "static/js/2.ef354312.chunk.js.map": "./cryptocurrency-tracker/static/js/2.ef354312.chunk.js.map",
-    "index.html": "./cryptocurrency-tracker/index.html",
-    "static/css/main.66217b66.chunk.css.map": "./cryptocurrency-tracker/static/css/main.66217b66.chunk.css.map",
-    "static/js/2.ef354312.chunk.js.LICENSE.txt": "./cryptocurrency-tracker/static/js/2.ef354312.chunk.js.LICENSE.txt"
+    "main.css": "/cryptocurrency-tracker/static/css/main.66217b66.chunk.css",
+    "main.js": "/cryptocurrency-tracker/static/js/main.fff77517.chunk.js",
+    "main.js.map": "/cryptocurrency-tracker/static/js/main.fff77517.chunk.js.map",
+    "runtime-main.js": "/cryptocurrency-tracker/static/js/runtime-main.61a81217.js",
+    "runtime-main.js.map": "/cryptocurrency-tracker/static/js/runtime-main.61a81217.js.map",
+    "static/js/2.ef354312.chunk.js": "/cryptocurrency-tracker/static/js/2.ef354312.chunk.js",
+    "static/js/2.ef354312.chunk.js.map": "/cryptocurrency-tracker/static/js/2.ef354312.chunk.js.map",
+    "index.html": "/cryptocurrency-tracker/index.html",
+    "static/css/main.66217b66.chunk.css.map": "/cryptocurrency-tracker/static/css/main.66217b66.chunk.css.map",
+    "static/js/2.ef354312.chunk.js.LICENSE.txt": "/cryptocurrency-tracker/static/js/2.ef354312.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5e2d09df.js",
+    "static/js/runtime-main.61a81217.js",
     "static/js/2.ef354312.chunk.js",
     "static/css/main.66217b66.chunk.css",
     "static/js/main.fff77517.chunk.js"
