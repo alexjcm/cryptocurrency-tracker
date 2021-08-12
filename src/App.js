@@ -14,9 +14,13 @@ const App = () => {
       <WatchListContextProvider>
         <BrowserRouter>
           <Header />
-          <Route exact path="/" component={CryptocurrencySummary} />
           <Route
-            path="/cryptocurrencies/:id"
+            exact
+            path="/cryptocurrency-tracker"
+            component={CryptocurrencySummary}
+          />
+          <Route
+            path="/cryptocurrency-tracker/cryptocurrencies/:id"
             component={CryptocurrencyDetail}
           />
         </BrowserRouter>

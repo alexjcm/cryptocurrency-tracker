@@ -7,7 +7,7 @@ import './Header.css';
 const Header = () => {
   return (
     <div>
-      <Link to={'/'} className="button-home">
+      <Link to={'/cryptocurrency-tracker'} className="button-home">
         <AiOutlineHome size={32} />
       </Link>
       <h1 className="text-center headerCryptocurrency">

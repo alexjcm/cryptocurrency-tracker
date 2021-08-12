@@ -26,8 +26,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "docker-build": "docker build --rm -t cryptocurrency-tracker .",
-    "docker-run": "docker run --rm -d -p 3001:3000 --name crypto-app cryptocurrency-tracker",
-    "docker-stop": "docker rm -f crypto-app"
+    "docker-run": "docker run --rm -p 3000:3000 --name cryptocurrency-tracker-app cryptocurrency-tracker",
+    "docker-stop": "docker rm -f cryptocurrency-tracker-app",
+    "docker-build-prod": "docker build --rm -t alexjcm/cryptocurrency-tracker ."
   },
   "eslintConfig": {
     "extends": [
