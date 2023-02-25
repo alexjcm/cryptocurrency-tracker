@@ -1,9 +1,9 @@
-import React, {useState, useContext} from 'react';
-import {WatchListContext} from '../context/watchListContext';
+import React, { useState, useContext } from 'react';
+import { WatchListContext } from '../context/watchListContext';
 
 const AddCryptocurrency = () => {
   const [isActive, setIsActive] = useState(false);
-  const {addCryptocurrency} = useContext(WatchListContext);
+  const { addCryptocurrency } = useContext(WatchListContext);
   const availableCryptocurrencies = [
     'bitcoin',
     'ethereum',
@@ -18,9 +18,9 @@ const AddCryptocurrency = () => {
     'polkadot',
     'solana',
     'stellar',
-    'uniswap',  
+    'uniswap',
     'dogecoin',
-    'eos',  
+    'eos',
     'tezos',
   ];
 

@@ -1,4 +1,4 @@
-import {transparentize, CHART_COLORS} from '../utils/Utils.js';
+import { transparentize, CHART_COLORS } from '../utils/Utils.js';
 
 function processTooltipModel(model) {
   if (!model.body) {

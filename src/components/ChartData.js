@@ -1,4 +1,4 @@
-import React, {useRef, useEffect, useState} from 'react';
+import React, { useRef, useEffect, useState } from 'react';
 
 import 'chartjs-adapter-date-fns';
 import {
@@ -10,11 +10,11 @@ import {
   LinearScale,
 } from 'chart.js';
 
-import {chartStyles, options} from '../chartOptions/chartOptions';
+import { chartStyles, options } from '../chartOptions/chartOptions';
 
-const ChartData = ({data}) => {
+const ChartData = ({ data }) => {
   const ctxChartRef = useRef();
-  const {day, week, year, detail} = data;
+  const { day, week, year, detail } = data;
   const [timeFormat, setTimeFormat] = useState('24h');
 
   const determineTimeFormat = () => {
