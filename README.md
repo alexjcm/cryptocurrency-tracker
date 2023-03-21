@@ -1,6 +1,6 @@
 # Cryptocurrency Tracker
 
-[![Deploy](https://github.com/alexjcm/cryptocurrency-tracker/actions/workflows/deploy.yml/badge.svg)](https://github.com/alexjcm/cryptocurrency-tracker/actions) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) [![Build & deploy](https://github.com/alexjcm/cryptocurrency-tracker/actions/workflows/build-and-deploy.yml/badge.svg?branch=main)](https://github.com/alexjcm/cryptocurrency-tracker/actions/workflows/build-and-deploy.yml)
 
 Cryptocurrency price tracker with React.js and [CoinGecko API V3](https://www.coingecko.com/es/api/documentation) to retrieve real-time and historical data for different cryptocurrencies.
 
