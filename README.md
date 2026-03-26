@@ -1,44 +1,38 @@
-# Cryptocurrency Tracker
+# Cryptocurrency Tracker (Barely-There UI)
 
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/facebook/react/blob/master/LICENSE) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg) [![Build & deploy](https://github.com/alexjcm/cryptocurrency-tracker/actions/workflows/build-and-deploy.yml/badge.svg?branch=main)](https://github.com/alexjcm/cryptocurrency-tracker/actions/workflows/build-and-deploy.yml)
+[![Build & deploy](https://github.com/alexjcm/cryptocurrency-tracker/actions/workflows/build-and-deploy.yml/badge.svg?branch=main)](https://github.com/alexjcm/cryptocurrency-tracker/actions/workflows/build-and-deploy.yml)
 
-Cryptocurrency price tracker with React.js and [CoinGecko API V3](https://www.coingecko.com/es/api/documentation) to retrieve real-time and historical data for different cryptocurrencies.
+A deeply minimalist, high-performance cryptocurrency price tracker built with **React 19**, **Vite**, and **Node 24**. It uses the [CoinGecko API V3](https://www.coingecko.com/es/api/documentation) to retrieve real-time data, historical charting, and asset metrics.
+
+This project emphasizes **Extreme Minimalism (Barely-There UI)**—stripping away borders, explicit containers, and heavy framework styling to let the data and pure typography take center stage against a stark dark-mode canvas.
+
+## Requirements
+- **Node.js**: `>= 24.0.0`
 
 ## Installation
 
-`npm install`
+```bash
+npm install
+```
 
-## Starting server
+## Running Locally
 
-In the project directory, you can run the app in the development mode:
+To run the application in development mode with Hot Module Replacement:
 
-`npm start`
+```bash
+npm start
+```
 
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:5173/](http://localhost:5173/) (or the port specified in your terminal) to view it in the browser. 
+*(Note: Production builds are configured to serve from `/cryptocurrency-tracker/` for GitHub Pages compatibility)*
 
-## More Scripts avaliables
+## Building for Production
 
-`npm test`
+```bash
+npm run build
+```
 
-Launches the test runner in the interactive watch mode.
-
-`npm build`
-
-Builds the app for production to the `build` folder. It correctly bundles React in production mode and optimizes the build for the best performance. The build is minified and the filenames include the hashes.
-
-## Installation with Docker
-
-`npm run docker-build`
-
-`npm run docker-run`
-
-Or
-
-`docker build --rm -t cryptocurrency-tracker .`
-
-`docker run --rm -p 3000:3000 --name cryptocurrency-tracker-app cryptocurrency-tracker`
-
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Builds the heavily optimized, minified app for production to the `build` folder using Vite.
 
 ## Contributing
 

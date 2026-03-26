@@ -18,23 +18,22 @@ export const WatchListContextProvider = (props) => {
       'polkadot',
       'solana',
       'stellar',
-      'uniswap',  
+      'uniswap',
       'dogecoin',
-      'eos',  
+      'eos',
       'tezos',
     ]
   );
+
+  const [selectedId, setSelectedId] = useState(null);
 
   useEffect(() => {
     localStorage.setItem('watchList', watchList);
   }, [watchList]);
 
   const deleteCryptocurrency = (cryptocurrency) => {
-    setWatchList(
-      watchList.filter((el) => {
-        return el !== cryptocurrency;
-      })
-    );
+    setWatchList(watchList.filter((el) => el !== cryptocurrency));
+    if (selectedId === cryptocurrency) setSelectedId(null);
   };
 
   const addCryptocurrency = (cryptocurrency) => {
@@ -45,7 +44,7 @@ export const WatchListContextProvider = (props) => {
 
   return (
     <WatchListContext.Provider
-      value={{watchList, deleteCryptocurrency, addCryptocurrency}}>
+      value={{watchList, deleteCryptocurrency, addCryptocurrency, selectedId, setSelectedId}}>
       {props.children}
     </WatchListContext.Provider>
   );

@@ -1,22 +1,8 @@
-import { transparentize, CHART_COLORS } from '../utils/Utils.js';
-
-function processTooltipModel(model) {
-  if (!model.body) {
-    return;
-  }
-  const tooltip = document.getElementById('tooltip');
-  tooltip.style.left = model.caretX + 'px';
-  tooltip.style.top = model.caretY - 66 - 5 + 'px';
-  tooltip.style.display = 'block';
-  tooltip.querySelector('.tooltip-label').textContent =
-    model.dataPoints[0].label;
-  tooltip.querySelector('.tooltip-value .value').textContent =
-    '$' + model.dataPoints[0].value;
-}
+import { transparentize } from '../utils/utils';
 
 export const options = {
   animation: {
-    duration: 1500,
+    duration: 1000,
   },
   maintainAspectRatio: false,
   responsive: true,
@@ -28,70 +14,70 @@ export const options = {
     x: {
       type: 'time',
       display: true,
-      title: {
-        display: true,
-        text: 'Date',
+      grid: {
+        display: false,
+        drawBorder: false,
+      },
+      border: {
+        display: false,
       },
       ticks: {
-        major: {
-          enabled: true,
-        },
+        color: '#666',
+        maxRotation: 0,
+        autoSkip: true,
+        maxTicksLimit: 6,
       },
     },
     y: {
-      title: {
-        display: true,
-        text: 'Price',
+      display: true,
+      grid: {
+        display: false,
+        drawBorder: false,
+      },
+      border: {
+        display: false,
       },
       ticks: {
+        color: '#666',
         callback: (value) => {
-          return '$' + value;
+          return '$' + value.toLocaleString();
         },
       },
     },
   },
-
-  //
   interaction: {
     intersect: false,
     mode: 'index',
   },
   plugins: {
     legend: {
-      labels: {
-        usePointStyle: true,
-      },
+      display: false,
     },
     title: {
-      display: true,
-      text: 'Chart with Tick Configuration',
+      display: false,
     },
-    // tooltip: {
-    //   backgroundColor: CHART_COLORS.yellow,
-    //   borderColor: CHART_COLORS.yellow,
-    //   borderWidth: 1,
-    //   titleColor: 'black',
-    //   displayColors: true,
-    // },
-  },
-  tooltips: {
-    enabled: false,
-    custom: processTooltipModel,
-    intersect: false,
-    mode: 'index',
+    tooltip: {
+      backgroundColor: '#111',
+      titleColor: '#888',
+      bodyColor: '#FFF',
+      borderColor: 'rgba(255, 255, 255, 0.1)',
+      borderWidth: 1,
+      padding: 12,
+      displayColors: false,
+      callbacks: {
+        label: (context) => '$' + context.parsed.y.toLocaleString(undefined, {minimumFractionDigits: 2}),
+      }
+    },
   },
 };
 
 export const chartStyles = {
-  borderColor: CHART_COLORS.green,
-  backgroundColor: transparentize(CHART_COLORS.red, 0.5),
-  fill: {
-    target: 'origin',
-    above: 'rgb(255, 0, 0)', // Area will be red above the origin
-    below: 'rgb(0, 0, 255)', // And blue below the origin
-  },
+  borderColor: '#FFFFFF',
+  backgroundColor: 'rgba(255, 255, 255, 0.03)',
+  fill: true,
   borderWidth: 2,
   pointRadius: 0,
-  pointStyle: 'circle',
-  pointBorderColor: 'rgb(0, 0, 0)',
+  pointHoverRadius: 6,
+  pointHoverBackgroundColor: '#FFF',
+  tension: 0.1,
 };
